@@ -1,0 +1,18 @@
+# Autodetach session on hangup instead of terminating screen
+autodetach on
+
+# Turn off the splash screen
+startup_message off
+
+# Large scrollback
+defscrollback 1000
+
+# Disply the status line at the bottom
+hardstatus on
+hardstatus alwayslastline
+hardstatus string "%{.kW}%-w%{.bW}%t [%n]%{-}%+w %=%{..G} %H %{..Y} %d/%m/%Y %c"
+# hardstatus string "%{= KW} %H %{= Kw}|%{-} %-Lw%{= bW}%n%f %t%{-}%+Lw"
+
+
+# "%{= KW} %H [%`] %{= Kw}|%{-} %-Lw%{= bW}%n%f %t%{-}%+Lw"
+# "%{.kW}%-w%{.bW}%t [%n]%{-}%+w %=%{..G} %H %{..Y} %Y/%m/%d %c"
