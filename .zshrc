@@ -42,5 +42,9 @@ setopt HIST_FIND_NO_DUPS
 # remove blanks from history
 setopt HIST_REDUCE_BLANKS
 
+# Environment variables
+# Default ls to use color
+export CLICOLOR=1
+
 # Changes
 # 081119 Initial config for macOS 10.15
