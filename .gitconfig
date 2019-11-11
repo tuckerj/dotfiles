@@ -3,3 +3,4 @@
 	email = web@agregson.com
 [credential]
 	helper = osxkeychain
+	helper = cache

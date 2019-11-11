@@ -45,6 +45,8 @@ setopt HIST_REDUCE_BLANKS
 # Environment variables
 # Default ls to use color
 export CLICOLOR=1
+export VISUAL="vim"
+export EDITOR="$VISUAL"
 
 # Changes
 # 081119 Initial config for macOS 10.15
