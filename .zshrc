@@ -45,6 +45,8 @@ setopt HIST_REDUCE_BLANKS
 # Environment variables
 # Default ls to use color
 export CLICOLOR=1
+# Use custom colors for dark background
+export LSCOLORS=GxFxCxDxBxegedabagaced
 export VISUAL="vim"
 export EDITOR="$VISUAL"
 
