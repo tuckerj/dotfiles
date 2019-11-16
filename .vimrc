@@ -168,6 +168,14 @@ augroup FileSpecific
 	au FileType vim setl fo=ro
 	au FileType qf setl wrap
 augroup END
+" et[expandtab]		Insert spaces for TABSs
+" fo[formatoption]	Format option
+" ts[tabstop]		Number of columns for TAB
+" sw[shiftwidth]	Number of coumns for indent
+" sts[softtabstop]	Number of spaces to insert/remove for TAB
+" tw[textwidth]		Text column to wrap at (display colour column)
+" wrap				Wrap at end of visual line
+" lbr[linebreak}	Break only at character in breakat
 
 " Display cursor line only in active window
 augroup CursLineInActiveWin
@@ -176,16 +184,7 @@ augroup CursLineInActiveWin
 	au WinLeave * setl nocursorline
 augroup END
 
-" augroup FileTest
-" 	au!
-" 	au FileType markdown :echom "markdown"
-" 	au FileType c :echom "c"
-" 	au FileType cpp :echom "cpp"
-" 	au FileType make :echom "make"
-" 	au FileType vim :echom "vim"
-" augroup END
-
-"
+" 
 " Plugin configuration 
 " 
 
