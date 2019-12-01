@@ -111,7 +111,7 @@ syntax enable			" Enable syntax highlighting
 set nospell				" Enable only for language files
 set formatoptions=ro
 
-" Add format list pattetn to support unordred lists in markdown
+" Add format list pattetn to support unordered lists in markdown
 set flp+=\\\|^\\s*\\[*+-]\\s*
 
 " Reload files if changed from outside
@@ -267,9 +267,10 @@ nnoremap <leader><leader> <C-^>
 " Easy buffer list with <leader>b then command e.g. <leader>b5<cr>
 nnoremap <leader>b :ls<cr>:b
 
-" Save and quit buffers with leader+f/x
+" <leader> + f=write, x=cloe and keep win/tab, X=delete buffer (and win)
 nnoremap <leader>f :w<cr>
-nnoremap <leader>x :bd<cr>
+nnoremap <leader>x :bp<cr>:bd # <cr>
+nnoremap <leader>X :bd<cr>
 
 " Toggle paste with leader+p
 set pastetoggle=<leader>p
@@ -323,7 +324,7 @@ nnoremap ]L :llast<cr>
 " nnoremap <S-tab> :tabp<cr>
 
 " TAB navigation with [] + t/T
-nnoremap [t :tabp<cr> 
+nnoremap [t :tabp<cr>
 nnoremap ]t :tabn<cr>
 nnoremap [T :tabfirst<cr>
 nnoremap ]T :tablast<cr>
