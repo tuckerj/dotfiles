@@ -1,8 +1,13 @@
 # ZSH
 # Last update: 01/12/2019
 
-NORMAL_PS1="%B%F{blue}%~ %(1j.[%j].)%# %b%f%k"
-INSERT_PS1="%B%F{green}%~ %(1j.[%j].)%# %b%f%k"
+# %B%F Enable fg colour and bold - blue (normal), green (insert)
+# %2~ Path (strat with ~ if below HOME) with max 2 trailing entries
+# (1j,[%j].) If 1 or more jobs show [jobs] otherwise null
+# %# # if escalated privileges otherwise 
+# %B%F%K Stop using bold/fg/bg
+NORMAL_PS1="%B%F{blue}%2~ %(1j.[%j].)%# %b%f%k"
+INSERT_PS1="%B%F{green}%2~ %(1j.[%j].)%# %b%f%k"
 PS1=$INSERT_PS1
 
 # Vi mode

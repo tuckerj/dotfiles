@@ -120,14 +120,23 @@ set autoread
 " Ignore temporary and other files in autocomplete
 set wildignore=*.swp,*.bak,*.pyc,*.class,*.o
 
-" Autiomatic options on buffer change
+" Automatic options on buffer change
 set autowriteall		" Autosave buffer on switch away
 " set autochdir			" Auto set working dir to active buffer
 
 " Prevent temporary files being created (and left)
 set nobackup
 set noswapfile	
-set noundofile
+
+" Undo options - persistent undo
+if empty(glob("$HOME/.vim/undo/"))
+	silent !mkdir -p $HOME/.vim/undo
+endif
+
+set undofile			" Create an undo file for each file
+set undodir=$HOME/.vim/undo
+set undolevels=1000
+set undoreload=10000
 
 " Matchig brackets
 set showmatch     		" Show matching parenthesis
@@ -260,6 +269,8 @@ nnoremap <silent> <leader>r :set relativenumber!<cr>
 
 " Clear search buffer with <leader>/ - remove highlights
 nnoremap <silent> <leader>/ :nohlsearch<CR>
+" Clear search buffer with <c-s> - remove highlights
+nnoremap <silent> <c-s> :nohls<cr>
 
 " Buffer maps
 " Switch buffers with leader leader
@@ -314,8 +325,8 @@ nnoremap ]Q :clast<cr>
 " nnoremap <silent> <leader>e :Errors<cr>
 nnoremap <silent> <leader>l :lopen<cr>
 nnoremap <silent> <leader>L :lclose<cr>
-nnoremap [l :lp<cr>
-nnoremap ]l :lN<cr>
+nnoremap [l :lprev<cr>
+nnoremap ]l :lnext<cr>
 nnoremap [L :lfirst<cr>
 nnoremap ]L :llast<cr>
 
